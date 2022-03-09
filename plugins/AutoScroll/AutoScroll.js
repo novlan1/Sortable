@@ -226,6 +226,11 @@ const autoScroll = throttle(function(evt, options, rootEl, isFallback) {
 		let vx = canScrollX && (Math.abs(right - x) <= sens && (scrollPosX + width) < scrollWidth) - (Math.abs(left - x) <= sens && !!scrollPosX);
 		let vy = canScrollY && (Math.abs(bottom - y) <= sens && (scrollPosY + height) < scrollHeight) - (Math.abs(top - y) <= sens && !!scrollPosY);
 
+		if (canScrollY && y <= top) {
+			vy = -1
+		} else if (canScrollY && y >= bottom && scrollPosY + height < scrollHeight ) {
+      vy = 1
+    }
 
 		if (!autoScrolls[layersOut]) {
 			for (let i = 0; i <= layersOut; i++) {
