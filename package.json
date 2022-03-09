@@ -1,7 +1,7 @@
 {
 	"name": "better-sortable",
 	"exportName": "Sortable",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"devDependencies": {
 		"@babel/core": "^7.4.4",
 		"@babel/plugin-transform-object-assign": "^7.2.0",
@@ -28,13 +28,9 @@
 		"test:compat": "node ./scripts/test-compat.js",
 		"test": "node ./scripts/test.js"
 	},
-	"maintainers": [
-		"Konstantin Lebedev <ibnRubaXa@gmail.com>",
-		"Owen Mills <owen23355@gmail.com>"
-	],
 	"repository": {
 		"type": "git",
-		"url": "git://github.com/SortableJS/Sortable.git"
+		"url": "https://github.com/novlan1/Sortable"
 	},
 	"files": [
 		"Sortable.js",
